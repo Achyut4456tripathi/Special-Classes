@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Classes | Registration</title>
+    <style>
+        :root {
+            --primary-blue: #004aad;
+            --accent-gold: #ffbd59;
+            --text-dark: #333;
+            --light-bg: #f9f9f9;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: var(--text-dark); background: var(--light-bg); }
+
+     
+        nav { 
+            background: #fff; 
+            padding: 1rem 5%; 
+            display: flex; 
+            flex-wrap: wrap;
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-blue); }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 500; }
+
+   
+        .hero {
+            background: linear-gradient(rgba(0, 74, 173, 0.85), rgba(0, 74, 173, 0.85)), url('https://unsplash.com');
+            background-size: cover; background-position: center;
+            color: white; padding: 80px 5% 140px; text-align: center;
+        }
+        .hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin-bottom: 15px; }
+
+   
+        .container { width: 90%; max-width: 1100px; margin: auto; }
+        .form-container {
+            background: #fff; padding: clamp(20px, 5%, 40px); 
+            border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 750px; margin: -80px auto 50px;
+        }
+        
+        .form-row { display: flex; gap: 20px; } 
+        .form-group { margin-bottom: 20px; flex: 1; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; }
+        input, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; }
+
+        .submit-btn {
+            background: var(--accent-gold); width: 100%; padding: 15px;
+            border: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold; cursor: pointer;
+        }
+
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; margin-top: 40px; 
+        }
+        .card { background: #fff; padding: 30px; text-align: center; border-bottom: 4px solid var(--primary-blue); border-radius: 8px; }
+
+       
+        
+       
+        @media (max-width: 768px) {
+            nav { justify-content: center; } 
+            .nav-links { margin-top: 15px; width: 100%; justify-content: center; }
+            .form-row { flex-direction: column; gap: 0; } 
+            .hero { padding: 60px 5% 100px; }
+        }
+
+     
+        @media (max-width: 480px) {
+            .nav-links { gap: 10px; font-size: 0.9rem; }
+            .form-container { margin-top: -60px; padding: 20px; }
+            .card { padding: 20px; }
+        }
+
+        footer { background: #222; color: white; text-align: center; padding: 40px; margin-top: 50px; }
+.footer-index{
+                
+height: 1.5vh;
+width: 100vh;
+padding-bottom: 98px;
+  width: 100%;
+  color: white;
+  align-items: center;
+background-color:#222;
+  background: #222;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+font-size: 20px;
+flex-wrap: wrap;
+
+  
+}
+.footer-items{
+
+transform: matrix3d();
+  color: white;
+align-items: center;
+transition: ease-in-out 1s;
+text-decoration: none;
+padding: 20px;
+flex-wrap: wrap;
+
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Special Classes</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#register">Register</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Coaching Assignments in Gorakhpur</h1>
+        <p>Expert matching for Classes 6 to 12 students.</p>
+    </header>
+
+    <div class="container">
+        <div class="form-container" id="register">
+            <h2 style="text-align: center; margin-bottom: 25px; color: var(--primary-blue);">Student Registration</h2>
+            <form>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input   id="student-name" type="text" placeholder="Enter name" required>
+                </div>
+                
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Class</label>
+                        
+                            <input type="number" placeholder="From 6th - 12th" required id="student-class">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Board</label>
+                       
+                          <input type="text" placeholder="Eg : CBSE / ICSE / UP Board" required id="student-board">
+                          
+                           
+                       
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>WhatsApp Number</label>
+                    <input type="tel" placeholder="10-digit mobile" required>
+                    <label>School</label>
+                    <input type="tel" placeholder="Eg:G.N.N.P.S , Non-schooling" required id="student-school">
+                    
+
+
+                </div>
+
+                <button type="submit" class="submit-btn" onclick=send_message()>Apply Now</button>
+            </form>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Local Expertise</h3>
+                <p>Assigned centers across Gorakhpur including Rustumpur & Gorakhpur</p>
+            </div>
+            <div class="card">
+                <h3>Top Faculty</h3>
+                <p>Access only verified and high-performing coaching institutes.</p>
+            </div>
+            <div class="card">
+                <h3>All Subjects</h3>
+                <p>Support for PCMB, Commerce, and Arts streams.</p>
+            </div>
+        </div>
+    </div>
+ <div id ="footer-home"> 
+          
+      <footer class="footer-index"> 
+        <a  href="aboutus.html" class="footer-items">About Us</a> 
+        <a  href="terms&conditions.html" class="footer-items">Terms & Condition</a> 
+        <a href="privacypolicies.html" class="footer-items">Privacy & Policy </a> 
+        <a  href="contactus.html" class="footer-items">Contact Us</a> 
+        <a href="tutorials.html" class="footer-items">Tutorials</a> 
+      </footer>
+      </div>
+
+
+
+      <script >
+                   function send_message() {
+                     const student_name= document.getElementById("student-name").value;
+                    const student_class= document.getElementById("student-class").value;
+                    const student_board= document.getElementById("student-board").value;
+                    const student_school= document.getElementById("student-school").value;
+                    const phone = "917905972844";
+
+                    
+                    
+                    const message  = "Hellow I am " + student_name + " I want you to join your coaching center I am in class  " + student_class+ " in " +student_board + "  currently i am in "+ student_school + ".";
+                    console.log(message)
+                    const encodedMessage = encodeURIComponent(message);
+                        const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+                            window.open(whatsappUrl, '_blank');
+                          
+                          
+    // 1. Enter the phone number in international format (without '+', '00', or brackets)
+
+    
+    // 2. The message you want to send
+   
+    // 3. Encode the message for the URL
+
+    
+    // 4. Create the Universal Link
+
+    
+    // 5. Open the link in a new tab
+
+
+
+                   
+
+
+            };
+
+       
+                    
+
+
+
+ document.querySelector("form").addEventListener("submit",function(event){
+    event.preventDefault();
+ })
+
+    </script>
+
+</body>
+
+</html>

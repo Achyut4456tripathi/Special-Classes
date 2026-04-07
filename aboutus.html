@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Special Classes Gorakhpur</title>
+    <style>
+        :root {
+            --primary-blue: #004aad;
+            --accent-gold: #ffbd59;
+            --text-dark: #333;
+            --light-gray: #f4f4f4;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        .header-section {
+            text-align: center;
+            background: linear-gradient(rgba(0,74,173,0.9), rgba(0,74,173,0.9)), url('https://unsplash.com');
+            background-size: cover;
+            color: white;
+            padding: 80px 20px;
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        h2 { color: var(--primary-blue); border-bottom: 2px solid var(--accent-gold); display: inline-block; padding-bottom: 5px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--primary-blue);
+        }
+        .stats {
+            background: var(--light-gray);
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 0;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        .stat-item h3 { font-size: 2rem; color: var(--primary-blue); margin: 0; }
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: #000;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .cta-button:hover { background: #e6a94a; }
+        footer { text-align: center; padding: 20px; background: #222; color: white; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <section class="header-section">
+        <h1>About Special Classes</h1>
+        <p>Your Trusted Partner in Academic Success across Gorakhpur</p>
+    </section>
+
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2>Our Mission</h2>
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 20px auto;">
+                At <strong>Special Classes</strong>, we bridge the gap between ambitious students and the finest coaching institutes in Gorakhpur. Our platform simplifies the registration process for Classes 6 to 12, ensuring every child finds the right mentor to unlock their true potential.
+            </p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Who We Are</h3>
+                <p>We are a Gorakhpur-based educational consultancy dedicated to local students. We understand the competitive landscape of our city and help parents navigate through hundreds of options to find the perfect fit for school exams, boards, and competitive prep.</p>
+            </div>
+            <div class="card">
+                <h3>What We Offer</h3>
+                <ul>
+                    <li>Verified Coaching Assignments</li>
+                    <li>Coverage for Classes 6th to 12th</li>
+                    <li>CBSE, ICSE, and UP Board Specialization</li>
+                    <li>Hassle-free Online Registration</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Our Vision</h3>
+                <p>To become the most reliable educational gateway in Eastern UP, where quality education is accessible to every student regardless of their location in Gorakhpur.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="stats">
+        <div class="stat-item">
+            <h3>50+</h3>
+            <p>Partner Centers</p>
+        </div>
+        <div class="stat-item">
+            <h3>1000+</h3>
+            <p>Students Assigned</p>
+        </div>
+        <div class="stat-item">
+            <h3>6-12</h3>
+            <p>Class Groups</p>
+        </div>
+        <div class="stat-item">
+            <h3>100%</h3>
+            <p>Verified Faculty</p>
+        </div>
+    </section>
+
+    <div class="container" style="text-align: center;">
+        <h2>Ready to start your journey?</h2>
+        <p>Register today and let us assign the best coaching near you.</p>
+        <a href="index.html" class="cta-button">Register Now</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Special Classes Gorakhpur. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
